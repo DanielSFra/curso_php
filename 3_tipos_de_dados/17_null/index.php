@@ -5,7 +5,7 @@ echo NULL;
 $nome = NULL;
 
 if(is_null($nome)){
-    echo "O valor é nulos!";
+    echo "O valor é nulos !";
 }
 $nome = "Daniel";
 
