@@ -1,6 +1,6 @@
 <?php
 // operador de diferença
-/* com o opeadore de diferença verificamos se um valor
+/* com o opeador e de diferença verificamos se um valor
 é diferente de outro 
 O simbolo é : !=
 Exemplo: 5 != # false

@@ -21,11 +21,15 @@ if($a !== $b) {
 }
 
 if(1 !== 2) {
+    echo "Não é idêntico 1 <br>";
+
+}
+
+if(1 !== "1") {
     echo "Não é identico 1 <br>";
 
 }
 
-if(1 !== 1) {
-    echo "não é identico 1 <br>";
-
+if([] !== "abc"){
+    echo "Não é idêntico 3 <br>";
 }
