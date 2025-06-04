@@ -32,7 +32,7 @@ if($a == $c){
 }
 
 $nome = "Daniel";
-$nomeDoSistema =  "João";
+$nomeDoSistema =  "";
 $nomeDiferente = "João";
 
 if($nome == $nomeDoSistema) {
