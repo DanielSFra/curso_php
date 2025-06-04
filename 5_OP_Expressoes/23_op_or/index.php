@@ -48,7 +48,7 @@ if(($a > $b || $d > $c ) && $c < $d){ // false e true
 }
 
 
-if(($a > $b && $d > $c ) && $c < $d){ // false e true
+if(($a > $b && $d < $c ) || $c < $d){ // false e true
     echo " Operação 7 é verdadeira <br>";
 }
 
