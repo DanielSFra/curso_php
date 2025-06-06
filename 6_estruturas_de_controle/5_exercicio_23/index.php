@@ -1,9 +1,7 @@
-<?php 
-/* 
-• Crie variáveis que recebem idade;
-• cheque se as idades são maiores ou iguais a 15;
-• Se sim imprima uma mensagem que a pessoa é maior de idade;
-*/
+<?php
+ //complemente do exercicio 22;
+ // insira um else com uma mensagem para as pessoas menores de 
+ //18 anos de idade;
 
 $idade1 = 40;
 $idade2 = 70;
@@ -18,23 +16,29 @@ $menoridade <=  18;
 $msg2 = "Você é menor de idade";
 
 if($idade1 >= $maioridade ){
-    echo "1 ";
+   
     echo $msg;
 
+}else{
+    echo $msg2 ;
 }
 
 
 if($idade2 >= $maioridade ){
-    echo "1 é maior de idade ";
+   
     echo $msg;
 
+}else{
+    echo $msg2 ;
 }
 
 if($idade3 >= $menoridade ){
-    echo "3 : é menor de idade ";
+   
     echo $msg2;
 
-}
+}else{
+    
+}   echo $msg;
 
 
 
@@ -55,4 +59,19 @@ if($idade3 >= $menoridade ){
 //echo $idade1 >= 18? "É maior de idade"  : " é menor de idade ";
 //echo $idade1 >= 18? "É maior de idade"  : " é menor de idade ";
 
+
+
+
+
+
+
+
+
 ?>
+
+
+
+
+
+
+
