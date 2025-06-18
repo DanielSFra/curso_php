@@ -1,0 +1,98 @@
+<?php
+include_once "backend.php"; // Certifique-se de que este caminho está correto
+
+// O resto do seu código HTML e PHP começa aqui
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja Bem-vindo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        ul {
+            list-style-type: none; /* Remove os marcadores padrão da lista principal */
+            padding: 0;
+        }
+        .categoria-principal {
+            margin-bottom: 15px;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .categoria-principal h3 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .sub-lista {
+            list-style-type: disc; /* Adiciona os marcadores para os itens da sublista */
+            margin-left: 25px;
+        }
+        .sub-lista li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Seja bem-vindo ao nosso site</h1>
+    <p><?= $nome; ?> veja as nossas ofertas</p>
+
+    <h2>Confira nossos principais produtos:</h2>
+    <ul>
+        <?php
+        // Verifica se o array $produtos existe e não está vazio
+        if (!empty($produtos) && is_array($produtos)):
+            // Itera sobre cada categoria principal (ex: "Celulares", "Móveis")
+            foreach ($produtos as $categoria => $itens_da_categoria):
+        ?>
+                <li class="categoria-principal">
+                    <h3><?= $categoria; ?></h3>
+                    <?php
+                    // Verifica se há itens dentro desta categoria e se é um array
+                    if (!empty($itens_da_categoria) && is_array($itens_da_categoria)):
+                    ?>
+                        <ul class="sub-lista">
+                            <?php
+                            // Itera sobre cada item dentro da sublista da categoria
+                            foreach ($itens_da_categoria as $item):
+                            ?>
+                                <li><?= $item; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php else: ?>
+                        <p>Nenhum item disponível nesta categoria no momento.</p>
+                    <?php endif; ?>
+                </li>
+        <?php
+            endforeach;
+        else:
+        ?>
+            <li>Nenhum produto cadastrado no momento.</li>
+        <?php endif; ?>
+    </ul>
+
+    <h2>Marcas que trabalhamos:</h2>
+    <?php if (!empty($marcas_disponiveis) && is_array($marcas_disponiveis)): ?>
+        <ul>
+            <?php foreach($marcas_disponiveis as $marca): ?>
+                <li><?= $marca; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p>Nenhuma marca disponível no momento.</p>
+    <?php endif; ?>
+
+</body>
+</html>
