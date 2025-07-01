@@ -45,7 +45,6 @@ $tv_video =  ["Smart Tv",
 "Antena Digital Interna"];
 //$informática = ["","","",];
 $produtos = ["Celulares","Movéis","Eletrodomésticos","Tv e Vídeo","Informática"];
-//$marcas  = ["","","",];
-
+//$marcas  = ["","","",]
 
 ?>
